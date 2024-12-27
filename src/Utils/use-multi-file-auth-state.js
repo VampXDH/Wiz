@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.useMultiFileAuthState = void 0;
+exports.UseMyState = void 0;
 const promises_1 = require("fs/promises");
 const path_1 = require("path");
 const WAProto_1 = require("../../WAProto");
@@ -22,7 +22,7 @@ const generics_1 = require("./generics");
  * Again, I wouldn't endorse this for any production level use other than perhaps a bot.
  * Would recommend writing an auth state for use with a proper SQL or No-SQL DB
  * */
-const useMultiFileAuthState = (folder) => __awaiter(void 0, void 0, void 0, function* () {
+const UseMyState = (folder) => __awaiter(void 0, void 0, void 0, function* () {
     const writeData = (data, file) => {
         return (0, promises_1.writeFile)((0, path_1.join)(folder, fixFileName(file)), JSON.stringify(data, generics_1.BufferJSON.replacer));
     };
@@ -86,4 +86,4 @@ const useMultiFileAuthState = (folder) => __awaiter(void 0, void 0, void 0, func
         }
     };
 });
-exports.useMultiFileAuthState = useMultiFileAuthState;
+exports.UseMyState = UseMyState;
