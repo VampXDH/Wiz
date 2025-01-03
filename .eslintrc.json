@@ -1,5 +1,5 @@
 {
-  "extends": "@balxs/balxzzy",
+  "extends": "@VampXDH/Wiz",
   "parserOptions": {
     "sourceType": "module",
     "project": "./tsconfig.json"
